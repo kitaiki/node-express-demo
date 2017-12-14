@@ -6,11 +6,16 @@ router.get('/:id', function(req, res) {
 });
 
 router.post('/', function(req, res) {
-    res.json({success: true})
+    console.log(JSON.stringify(req.body, null, 2));
+
+    res.json({
+        success: true,
+        user: req.body.username
+    })
 });
 
 router.put('/', function(req, res) {
-    res.status(400).json({message: 'bad rq!!'});
+    res.status(400).json({message: 'bad dddrqasdfasdfasdf!!'});
 });
 
 router.delete('/', function(req, res) {
